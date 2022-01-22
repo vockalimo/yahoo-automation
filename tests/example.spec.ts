@@ -25,21 +25,17 @@ test('basic test2', async ({ context, page }) => {
    //await page.clearBrowserCacheParameters
    
    console.log(process.env.USERNAME);
-     let username = process.env.USERNAME;
-     console.log( " user name " + username)
   //   let password = process.env.PASSWORD;
 
 
    await context.clearCookies();
    expect(await context.cookies()).toEqual([]);
    await page.goto('https://tw.mall.yahoo.com');
+   await page.screenshot({ path: './test-results/screenshot.png', fullPage: true });
    await expect(page).toHaveTitle(/Yahoo/);
- //  console.log(process.env.USERNAME);
- //  console.log(process.env.PASSWORD);
-   //{ timeout=30, wait_until="DocumentLoaded|Load|networkidle" }
-
- //   let username = process.env.USERNAME;
- //   let password = process.env.PASSWORD;
+ 
+   let username = process.env.USERNAME;
+   let password = process.env.PASSWORD;
        // input username & password
   /*
     await page.goto(
