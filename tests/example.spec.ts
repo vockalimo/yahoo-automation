@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import dotenv from "dotenv"
 dotenv.config({ path: '.env' })
+//require('dotenv').config();
 
 /*
 test('basic test', async ({ page }) => {
@@ -23,6 +24,12 @@ test('basic test2', async ({ context, page }) => {
 
    //await page.clearBrowserCacheParameters
    
+   console.log(process.env.USERNAME);
+     let username = process.env.USERNAME;
+     console.log( " user name " + username)
+  //   let password = process.env.PASSWORD;
+
+
    await context.clearCookies();
    expect(await context.cookies()).toEqual([]);
    await page.goto('https://tw.mall.yahoo.com');
