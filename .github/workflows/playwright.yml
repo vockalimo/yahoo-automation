@@ -17,6 +17,11 @@ jobs:
       run: npm ci
     - name: Install Playwright
       run: npx playwright install --with-deps
+    - name: Prepare data 
+      run: |
+          touch .env
+          echo USERNAME=${{ secrets.USERNAME }} >> .env
+          echo PASSWORD=${{ secrets.PASSWORD }} >> .env
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v2
