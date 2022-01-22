@@ -25,13 +25,16 @@ test('basic test2', async ({ context, page }) => {
    
    await context.clearCookies();
    expect(await context.cookies()).toEqual([]);
-   console.log(process.env.USERNAME);
-   console.log(process.env.PASSWORD);
+   await page.goto('https://tw.mall.yahoo.com');
+   await expect(page).toHaveTitle(/Yahoo/);
+ //  console.log(process.env.USERNAME);
+ //  console.log(process.env.PASSWORD);
    //{ timeout=30, wait_until="DocumentLoaded|Load|networkidle" }
 
-    let username = process.env.USERNAME;
-    let password = process.env.PASSWORD;
+ //   let username = process.env.USERNAME;
+ //   let password = process.env.PASSWORD;
        // input username & password
+       /*
     await page.goto(
       'https://login.yahoo.com/m?.lg=tw&.intl=tw&.src=mktg1&.done=http://tw.bid.yahoo.com/status.html'
     );
@@ -41,6 +44,7 @@ test('basic test2', async ({ context, page }) => {
     await page.waitForSelector('#login-passwd');
     await page.type('#login-passwd', password);
     await page.click('#login-signin');
+
 
 
    await page.goto('https://tw.mall.yahoo.com' );
@@ -56,7 +60,7 @@ test('basic test2', async ({ context, page }) => {
 
     await expect(page.locator(css_selector)).toHaveText('登出');
 
-   
+   */
 
 
    /*
@@ -77,11 +81,9 @@ test('basic test2', async ({ context, page }) => {
 //#UH-Res > div.UHCol3.Grid-U > ul > li:nth-child(2) > a
 
 
-//a.Fw-b:nth-child(2)
-   await page.goto('https://tw.mall.yahoo.com');
-   await expect(page).toHaveTitle(/Yahoo/);
+  
    //#isoredux-root > div > div:nth-child(1) > div > div > div.ResultList_resultList_2J1jC > div.ResultList_flexList_1NIrD > div > div > ul > li:nth-child(1) > a > div > span > span.BaseGridItem__price___31jkj > em
    //#isoredux-root > div > div:nth-child(1) > div > div > div.ResultList_resultList_2J1jC > div.ResultList_flexList_1NIrD > div > div > ul > li:nth-child(3) > a > div > span > span.BaseGridItem__price___31jkj > em
-  */
+  
 });
 //src/main/java/com/yahoo/ec/portal/merchant/core
