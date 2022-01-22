@@ -34,7 +34,7 @@ test('basic test2', async ({ context, page }) => {
  //   let username = process.env.USERNAME;
  //   let password = process.env.PASSWORD;
        // input username & password
-       /*
+  /*
     await page.goto(
       'https://login.yahoo.com/m?.lg=tw&.intl=tw&.src=mktg1&.done=http://tw.bid.yahoo.com/status.html'
     );
@@ -60,10 +60,9 @@ test('basic test2', async ({ context, page }) => {
 
     await expect(page.locator(css_selector)).toHaveText('登出');
 
-   */
+   
 
-
-   /*
+   
    let username = process.env.USERNAME;
    let password = process.env.PASSWORD;
        // input username & password
@@ -77,13 +76,7 @@ test('basic test2', async ({ context, page }) => {
     await page.type('#login-passwd', password);
     await page.click('#login-signin');
   //text=Learn more   await page.waitForNavigation();
+  */
 
-//#UH-Res > div.UHCol3.Grid-U > ul > li:nth-child(2) > a
-
-
-  
-   //#isoredux-root > div > div:nth-child(1) > div > div > div.ResultList_resultList_2J1jC > div.ResultList_flexList_1NIrD > div > div > ul > li:nth-child(1) > a > div > span > span.BaseGridItem__price___31jkj > em
-   //#isoredux-root > div > div:nth-child(1) > div > div > div.ResultList_resultList_2J1jC > div.ResultList_flexList_1NIrD > div > div > ul > li:nth-child(3) > a > div > span > span.BaseGridItem__price___31jkj > em
   
 });
-//src/main/java/com/yahoo/ec/portal/merchant/core
