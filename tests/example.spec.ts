@@ -102,7 +102,7 @@ test('basic test2', async ({ context, page }) => {
     }
   );
 
-  await page.screenshot({ path: 'screenshot/mall-search.png' });
+  await page.screenshot({ path: './test-results/mall-search.png' });
   
   console.log(`About ${count} results in 「${keyword}」 search.`);
   console.log('mall search test success.');
