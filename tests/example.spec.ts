@@ -34,12 +34,13 @@ test('basic test2', async ({ context, page }) => {
    await page.goto(
 		   'https://login.yahoo.com/m?.lg=tw&.intl=tw&.src=mktg1&.done=http://tw.bid.yahoo.com/status.html'
 		  );
-   await page.waitForSelector('#login-username');
-   await page.type('#login-username', username);
-   await page.click('#login-signin');
-   await page.waitForSelector('#login-passwd');
-   await page.type('#login-passwd', password);
-   await page.click('#login-signin');
+   await page.screenshot({ path: './test-results/screenshot.png', fullPage: true });
+ //  await page.waitForSelector('#login-username');
+ //  await page.type('#login-username', username);
+ //  await page.click('#login-signin');
+ //  await page.waitForSelector('#login-passwd');
+ //  await page.type('#login-passwd', password);
+ //  await page.click('#login-signin');
    console.log(" test done ..... ");
 
 /*
