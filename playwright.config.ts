@@ -31,8 +31,8 @@ const config: PlaywrightTestConfig = {
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
  // reporter: 'html',
-  //reporter: process.env.CI ? 'github' : 'list', 
-  reporter: './my-awesome-reporter.ts', 
+  reporter: process.env.CI ? 'github' : 'list', 
+ // reporter: './my-awesome-reporter.ts', 
  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
