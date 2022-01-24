@@ -23,6 +23,9 @@ jobs:
           echo USERWORD=${{ secrets.PASSWORD }} >> .env
           echo USERNAME=${{ secrets.USERNAME }} >> .env
     - name: Run Playwright tests
+      env:
+          ACTIONS_RUNNER_DEBUG: true
+          ACTIONS_STEP_DEBUG: true
       run: npx playwright test
     - uses: actions/upload-artifact@v2
       if: always()
