@@ -30,6 +30,7 @@ test('basic test2', async ({ context, page }) => {
    let password = process.env.PASSWORD;
        // input username & password
   
+  console.log(" start. test done ..... ");
    await page.goto(
 		   'https://login.yahoo.com/m?.lg=tw&.intl=tw&.src=mktg1&.done=http://tw.bid.yahoo.com/status.html'
 		  );
