@@ -33,7 +33,7 @@ test('basic test2', async ({ context, page }) => {
 
   console.log(" start. test start ..... 1 ");
    await page.goto(
-		   'https://login.yahoo.com/config/login?.intl=tw&.src=mktg1&.pd=c%3DlVuuuM272e4FzSWCFQRlEd3GYg--&.done=http://tw.mall.yahoo.com'
+		   'https://login.yahoo.com/?.lang=en-US&src=homepage&.done=https%3A%2F%2Fus.yahoo.com%2F&pspid=2023538075&activity=ybar-signin'
 		  );
      console.log(" start. test start ..... 2 ");
    await page.screenshot({ path: './test-results/yahoologin.png', fullPage: true });
@@ -47,7 +47,7 @@ test('basic test2', async ({ context, page }) => {
  // console.log(" start. click login done to input data ..... ");
  
    await page.screenshot({ path: './test-results/yahoopass.png', fullPage: true });
-   console.log(" start. test start ..... 6 ");
+   console.log(" start. test start ..... 6 "); 
    await page.waitForSelector('#login-passwd');
       console.log(" start. test start ..... 7 ");
    await page.screenshot({ path: './test-results/yahoopassinputp.png', fullPage: true });
