@@ -30,19 +30,20 @@ test('basic test2', async ({ context, page }) => {
    let password = process.env.PASSWORD;
        // input username & password
   
-    await page.goto(
-      'https://login.yahoo.com/m?.lg=tw&.intl=tw&.src=mktg1&.done=http://tw.bid.yahoo.com/status.html'
-    );
-    await page.waitForSelector('#login-username');
-    await page.type('#login-username', username);
-    await page.click('#login-signin');
-    await page.waitForSelector('#login-passwd');
-    await page.type('#login-passwd', password);
-    await page.click('#login-signin');
+   await page.goto(
+		   'https://login.yahoo.com/m?.lg=tw&.intl=tw&.src=mktg1&.done=http://tw.bid.yahoo.com/status.html'
+		  );
+   await page.waitForSelector('#login-username');
+   await page.type('#login-username', username);
+   await page.click('#login-signin');
+   await page.waitForSelector('#login-passwd');
+   await page.type('#login-passwd', password);
+   await page.click('#login-signin');
+   console.log(" test done ..... ");
 
-
-
+/*
    await page.goto('https://tw.mall.yahoo.com' );
+   await expect(page).toHaveTitle(/Yahoo/);
 
    console.log(await page.url)
    console.log(await page.title())
@@ -53,6 +54,7 @@ test('basic test2', async ({ context, page }) => {
    console.log(await page.textContent(css_selector));
    
    await expect(page.locator(css_selector)).toHaveText('登出');
+*/
 
   
 });
