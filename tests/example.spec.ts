@@ -46,6 +46,8 @@ test('basic test2', async ({ context, page }) => {
 
  
    await page.waitForSelector('#login-passwd');
+   await page.screenshot({ path: './test-results/yahoopassinputp.png', fullPage: true });
+   
    await page.type('#login-passwd', password);
    await page.click('#login-signin');
 
