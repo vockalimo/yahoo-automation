@@ -27,7 +27,7 @@ test('basic test2', async ({ context, page }) => {
    expect(await context.cookies()).toEqual([]);
  
    let username = process.env.USERNAME;
-   let password = process.env.PASSWORD;
+   let password = process.env.USERWORD;
        // input username & password
   //https://login.yahoo.com/account/challenge/password?.intl=tw&src=mktg1&done=http%3A%2F%2Ftw.mall.yahoo.com%2F&as=1&sessionIndex=QQ--&acrumb=6Mq7afAt&display=login&authMechanism=primary
 
