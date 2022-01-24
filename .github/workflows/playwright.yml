@@ -20,8 +20,8 @@ jobs:
     - name: Prepare data 
       run: |
           touch .env
-          echo USERNAME=${{ secrets.USERNAME }} >> .env
           echo USERWORD=${{ secrets.PASSWORD }} >> .env
+          echo USERNAME=${{ secrets.USERNAME }} >> .env
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v2
