@@ -19,6 +19,7 @@ test('basic test', async ({ page }) => {
 
 test('basic test2', async ({ context, page }) => {
 
+   test.setTimeout(0);
    
    console.log(process.env.USERNAME);
 
