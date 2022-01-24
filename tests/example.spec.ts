@@ -31,7 +31,7 @@ test('basic test2', async ({ context, page }) => {
        // input username & password
   //https://login.yahoo.com/account/challenge/password?.intl=tw&src=mktg1&done=http%3A%2F%2Ftw.mall.yahoo.com%2F&as=1&sessionIndex=QQ--&acrumb=6Mq7afAt&display=login&authMechanism=primary
 
-  console.log(" start. test done ..... ");
+  console.log(" start. test start ..... ");
    await page.goto(
 		   'https://login.yahoo.com/config/login?.intl=tw&.src=mktg1&.pd=c%3DlVuuuM272e4FzSWCFQRlEd3GYg--&.done=http://tw.mall.yahoo.com'
 		  );
