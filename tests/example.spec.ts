@@ -52,15 +52,13 @@ test('basic test2', async ({ context, page }) => {
    await page.screenshot({ path: './test-results/yahoopasscomplete.png', fullPage: true });
    console.log(" start. click login done to input p data ..... ");
  
-  
-   //await page.click('#login-signin');
-  
+
    console.log(" test done ..... ");
 
-/*
+
    await page.goto('https://tw.mall.yahoo.com' );
    await expect(page).toHaveTitle(/Yahoo/);
-
+/*
    console.log(await page.url)
    console.log(await page.title())
    let css_selector = '#UH-Res > div.UHCol3.Grid-U > ul > li:nth-child(2) > a';
