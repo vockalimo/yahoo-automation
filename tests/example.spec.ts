@@ -31,25 +31,34 @@ test('basic test2', async ({ context, page }) => {
        // input username & password
   //https://login.yahoo.com/account/challenge/password?.intl=tw&src=mktg1&done=http%3A%2F%2Ftw.mall.yahoo.com%2F&as=1&sessionIndex=QQ--&acrumb=6Mq7afAt&display=login&authMechanism=primary
 
-  console.log(" start. test start ..... ");
+  console.log(" start. test start ..... 1 ");
    await page.goto(
 		   'https://login.yahoo.com/config/login?.intl=tw&.src=mktg1&.pd=c%3DlVuuuM272e4FzSWCFQRlEd3GYg--&.done=http://tw.mall.yahoo.com'
 		  );
+     console.log(" start. test start ..... 2 ");
    await page.screenshot({ path: './test-results/yahoologin.png', fullPage: true });
    //await page.waitForSelector('#login-username');
+    console.log(" start. test start ..... 3 ");
    await page.type('#login-username', username);
+       console.log(" start. test start ..... 4 ");
    await page.click('#login-signin');
+       console.log(" start. test start ..... 5 ");
  //  await page.screenshot({ path: './test-results/yahoo.png', fullPage: true });
  // console.log(" start. click login done to input data ..... ");
  
    await page.screenshot({ path: './test-results/yahoopass.png', fullPage: true });
+   console.log(" start. test start ..... 6 ");
 
  
    await page.waitForSelector('#login-passwd');
+      console.log(" start. test start ..... 7 ");
    await page.screenshot({ path: './test-results/yahoopassinputp.png', fullPage: true });
+      console.log(" start. test start ..... 8 ");
    
    await page.type('#login-passwd', password);
+      console.log(" start. test start ..... 9 ");
    await page.click('#login-signin');
+      console.log(" start. test start ..... 10 ");
 
    await page.screenshot({ path: './test-results/yahoopasscomplete.png', fullPage: true });
    console.log(" start. click login done to input p data ..... ");
