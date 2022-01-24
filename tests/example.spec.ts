@@ -48,8 +48,6 @@ test('basic test2', async ({ context, page }) => {
  
    await page.screenshot({ path: './test-results/yahoopass.png', fullPage: true });
    console.log(" start. test start ..... 6 ");
-
- 
    await page.waitForSelector('#login-passwd');
       console.log(" start. test start ..... 7 ");
    await page.screenshot({ path: './test-results/yahoopassinputp.png', fullPage: true });
