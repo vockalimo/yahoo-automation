@@ -43,7 +43,7 @@ test('basic test2', async ({ context, page }) => {
   console.log(" start. click login done to input data ..... ");
  
    //await page.waitForSelector('#login-passwd');
-   console.log(password);
+   console.log(process.env.USERWORD);
    await page.screenshot({ path: './test-results/yahoopass.png', fullPage: true });
 
    await page.type('#login-passwd', password);
