@@ -29,11 +29,13 @@ test('basic test2', async ({ context, page }) => {
    let username = process.env.USERNAME;
    let password = process.env.PASSWORD;
        // input username & password
-  
+  //https://login.yahoo.com/account/challenge/password?.intl=tw&src=mktg1&done=http%3A%2F%2Ftw.mall.yahoo.com%2F&as=1&sessionIndex=QQ--&acrumb=6Mq7afAt&display=login&authMechanism=primary
+
   console.log(" start. test done ..... ");
    await page.goto(
-		   'https://login.yahoo.com/m?.lg=tw&.intl=tw&.src=mktg1&.done=http://tw.bid.yahoo.com/status.html'
+		   'https://login.yahoo.com/config/login?.intl=tw&.src=mktg1&.pd=c%3DlVuuuM272e4FzSWCFQRlEd3GYg--&.done=http://tw.mall.yahoo.com'
 		  );
+   await page.screenshot({ path: './test-results/yahoologin.png', fullPage: true });
    //await page.waitForSelector('#login-username');
    await page.type('#login-username', username);
    await page.click('#login-signin');
