@@ -39,14 +39,17 @@ test('basic test2', async ({ context, page }) => {
    //await page.waitForSelector('#login-username');
    await page.type('#login-username', username);
    await page.click('#login-signin');
-   await page.screenshot({ path: './test-results/yahoo.png', fullPage: true });
-  console.log(" start. click login done to input data ..... ");
+ //  await page.screenshot({ path: './test-results/yahoo.png', fullPage: true });
+ // console.log(" start. click login done to input data ..... ");
  
-   //await page.waitForSelector('#login-passwd');
-   console.log(process.env.USERWORD);
    await page.screenshot({ path: './test-results/yahoopass.png', fullPage: true });
 
+ 
+   await page.waitForSelector('#login-passwd');
    await page.type('#login-passwd', password);
+   await page.click('#login-signin');
+
+   await page.screenshot({ path: './test-results/yahoopasscomplete.png', fullPage: true });
    console.log(" start. click login done to input p data ..... ");
  
   
