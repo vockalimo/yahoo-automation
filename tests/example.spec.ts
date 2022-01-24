@@ -18,23 +18,12 @@ test('basic test', async ({ page }) => {
 */
 
 test('basic test2', async ({ context, page }) => {
-  // await page.goto('https://playwright.dev/');
- //  await page.locator('text=Get started').click();
- //  await expect(page).toHaveTitle(/Getting started/);
 
-   //await page.clearBrowserCacheParameters
    
    console.log(process.env.USERNAME);
-  //   let password = process.env.PASSWORD;
-
 
    await context.clearCookies();
    expect(await context.cookies()).toEqual([]);
-   /*
-   await page.goto('https://tw.mall.yahoo.com');
-   await page.screenshot({ path: './test-results/screenshot.png', fullPage: true });
-   await expect(page).toHaveTitle(/Yahoo/);
-   */
  
    let username = process.env.USERNAME;
    let password = process.env.PASSWORD;
