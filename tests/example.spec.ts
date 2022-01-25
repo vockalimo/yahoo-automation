@@ -30,7 +30,7 @@ test('basic test2', async ({ context, page }) => {
    let password = process.env.USERWORD;
        // input username & password
   //https://login.yahoo.com/account/challenge/password?.intl=tw&src=mktg1&done=http%3A%2F%2Ftw.mall.yahoo.com%2F&as=1&sessionIndex=QQ--&acrumb=6Mq7afAt&display=login&authMechanism=primary
-/*
+
   console.log(" start. test start ..... 1 ");
    await page.goto(
 		   'https://login.yahoo.com/?.lang=en-US&src=homepage&.done=https%3A%2F%2Fus.yahoo.com%2F&pspid=2023538075&activity=ybar-signin'
@@ -48,6 +48,10 @@ test('basic test2', async ({ context, page }) => {
  
    await page.screenshot({ path: './test-results/yahoopass.png', fullPage: true });
    console.log(" start. test start ..... 6 "); 
+   await page.waitForNavigation({ waitUntil:'networkidle' });
+   await page.screenshot({ path: './test-results/yahoopassinputp.png', fullPage: true });
+      console.log(" start. test start ..... 7 ");
+
    await page.waitForSelector('#login-passwd');
       console.log(" start. test start ..... 7 ");
    await page.screenshot({ path: './test-results/yahoopassinputp.png', fullPage: true });
@@ -86,40 +90,11 @@ test('basic test2', async ({ context, page }) => {
 */
 
 // As a buyer, I could search "macbook"
-  const selectorSearch = '#ecs input[type=search]';
-  const keyword = "macbook";
-
-  await page.goto('https://tw.mall.yahoo.com/');
-  await page.waitForSelector(selectorSearch);
-  await page.type(selectorSearch, keyword);
-  await page.focus(selectorSearch);
-  await page.keyboard.press('Enter');
-  await page.waitForNavigation({ waitUntil:'networkidle' });
-  await page.waitForSelector('[class*=SortBar_sortCount]');
-  const count = await page.$eval('[class*=SortBar_sortCount]',
-    (node) => {
-      return node.textContent.replace(/(\d*).*/, '$1')
-    }
-  );
-
-  await page.screenshot({ path: './test-results/mall-search.png' });
-  
-  console.log(`About ${count} results in 「${keyword}」 search.`);
-  console.log('mall search test success.');
 
 
-  // #yui_3_12_0_1_1643030071026_133
-/*
-   console.log(await page.url)
-   console.log(await page.title())
-   let css_selector = '#UH-Res > div.UHCol3.Grid-U > ul > li:nth-child(2) > a';
-   console.log(await page.innerText(css_selector));
 
-   console.log(await page.innerHTML(css_selector));
-   console.log(await page.textContent(css_selector));
-   
-   await expect(page.locator(css_selector)).toHaveText('登出');
-*/
+
+
 
   
 });
